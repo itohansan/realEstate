@@ -4,7 +4,7 @@ import React, { use, useEffect, useState } from "react";
 import { toast } from "sonner";
 import Slider from "../_components/Slider";
 import Details from "../_components/Details";
-import { supabase } from "utils/supabase/client";
+import { supabase } from "../../../../utils/supabase/client";
 
 const ViewListing = ({ params }) => {
   const { id } = use(params);

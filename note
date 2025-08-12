@@ -1,4 +1,5 @@
 "use client";
+import { supabase } from "../../../../../real-estate-app/utils/supabase/client";
 
 import { Label } from "../../../../@/components/ui/label";
 import {
@@ -34,7 +35,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../../../../@/components/ui/alert-dialog";
-import { supabase } from "../../../../utils/supabase/client";
 
 const EditListing = ({ params }) => {
   // const params = usePathname();
@@ -326,8 +326,15 @@ const EditListing = ({ params }) => {
                   >
                     {loading ? <Loader className="animate-spin" /> : "Save"}
                   </Button>
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    onClick={() => publishBtnHandler()}
+                  >
+                    {loading ? <Loader /> : "Save & publish"}
+                  </Button>
 
-                  <AlertDialog>
+                  {/* <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button type="submit" disabled={loading}>
                         {loading ? <Loader /> : "Save & publish"}
@@ -351,7 +358,7 @@ const EditListing = ({ params }) => {
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
-                  </AlertDialog>
+                  </AlertDialog> */}
                 </div>
               </div>
             </div>

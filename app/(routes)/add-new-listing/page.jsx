@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { useUser } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { supabase } from "utils/supabase/client";
+import { supabase } from "../../../utils/supabase/client";
 supabase;
 function AddNewListing() {
   const { user } = useUser();
