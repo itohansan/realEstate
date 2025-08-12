@@ -3,12 +3,12 @@
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import GoogleAddressSearch from "../../_components/GoogleAddressSearch";
-import { supabase } from "../../../../real-estate-app/utils/supabase/client";
 import { toast } from "sonner";
 import { useUser } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import { useRouter } from "next/navigation";
-
+import { supabase } from "utils/supabase/client";
+supabase;
 function AddNewListing() {
   const { user } = useUser();
   const [selectedAddress, setSelectedAddress] = useState();

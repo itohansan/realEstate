@@ -1,5 +1,4 @@
 "use client";
-import { supabase } from "../../../../../real-estate-app/utils/supabase/client";
 
 import { Label } from "../../../../@/components/ui/label";
 import {
@@ -35,6 +34,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../../../../@/components/ui/alert-dialog";
+import { supabase } from "utils/supabase/client";
 
 const EditListing = ({ params }) => {
   // const params = usePathname();
